@@ -1,8 +1,9 @@
 import 'package:concentric_transition/page_view.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:life_note/constants/theme/app_colors/app_color.dart';
 import 'package:life_note/ui/screens/onboarding_screen/intro_screen.dart';
+import 'package:life_note/ui/screens/splash_screen/splash_screen.dart';
+import 'package:life_note/utilities/utilities.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen(
@@ -13,18 +14,41 @@ class OnboardingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<Widget> pages = [
+      const IntroScreen(
+        bigText: 'Life Note',
+        smallText: 'Record Your Life\nNever Miss A Moment',
+        imageUrl: r'assets/images/laptop_girl_1.gif',
+      ),
+      const IntroScreen(
+        bigText: 'Dear Dirary',
+        smallText: 'Record Your Life\nNever Miss A Moment',
+        imageUrl: r'assets/images/boy_studying.gif',
+      ),
+      const IntroScreen(
+        bigText: 'Note',
+        smallText: 'Record Your Life\nNever Miss A Moment',
+        imageUrl: r'assets/images/laptop_girl_2.gif',
+      ),
+    ];
+
     return SafeArea(
       child: Scaffold(
         body: ConcentricPageView(
-          colors: const [
-            AppColorDark.backgroundColor,
-            AppColorDark.backgroundColor,
-            AppColorDark.backgroundColor
-          ],
-          itemCount: 3,
-          itemBuilder: (int index) =>
-              IntroScreen(bigText: bigText, smallText: smallText),
-        ),
+            radius: 30,
+            onFinish: () {
+              Utilities().navigatTo(
+                context: context,
+                screen: SplashScreen(),
+              );
+            },
+            verticalPosition: 0.85,
+            colors: const [
+              AppColorDark.buttonColor,
+              AppColorDark.backgroundColor,
+            ],
+            itemCount: 4,
+            itemBuilder: (int index) => pages[index]),
       ),
     );
   }
