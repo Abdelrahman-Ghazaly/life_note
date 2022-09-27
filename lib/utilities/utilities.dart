@@ -1,6 +1,5 @@
-import 'package:concentric_transition/concentric_transition.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
 class Utilities {
@@ -19,11 +18,16 @@ class Utilities {
       MediaQueryData.fromWindow(WidgetsBinding.instance.window).size.width;
 
   navigatTo({required BuildContext context, required Widget screen}) {
-    Navigator.pushReplacement(
-      context,
-      MaterialPageRoute(
-        builder: (context) => screen,
-      ),
+    Future.delayed(
+      Duration.zero,
+      () {
+        Navigator.pushReplacement(
+          context,
+          _MyRoute(
+            builder: (context) => screen,
+          ),
+        );
+      },
     );
   }
 
@@ -32,4 +36,11 @@ class Utilities {
     XFile? file = await imagePicker.pickImage(source: ImageSource.gallery);
     return file?.readAsBytes();
   }
+}
+
+class _MyRoute extends CupertinoPageRoute {
+  _MyRoute({required WidgetBuilder builder}) : super(builder: builder);
+
+  @override
+  Duration get transitionDuration => const Duration(milliseconds: 3200);
 }

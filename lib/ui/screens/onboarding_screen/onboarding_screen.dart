@@ -6,13 +6,18 @@ import 'package:life_note/ui/screens/onboarding_screen/intro_screen.dart';
 import 'package:life_note/ui/screens/splash_screen/splash_screen.dart';
 import 'package:life_note/utilities/utilities.dart';
 
-class OnboardingScreen extends StatelessWidget {
+class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen(
       {Key? key, required this.bigText, required this.smallText})
       : super(key: key);
   final String bigText;
   final String smallText;
 
+  @override
+  State<OnboardingScreen> createState() => _OnboardingScreenState();
+}
+
+class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     List<Widget> pages = [
@@ -31,6 +36,7 @@ class OnboardingScreen extends StatelessWidget {
         smallText: 'Record Your Life\nNever Miss A Moment',
         imageUrl: r'assets/images/laptop_girl_2.gif',
       ),
+      const SplashScreen(),
     ];
 
     return SafeArea(
