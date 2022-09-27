@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:life_note/constants/theme/theme.dart';
-import 'package:life_note/ui/screens/onboarding_screen/intro_screen.dart';
 import 'package:life_note/ui/screens/onboarding_screen/onboarding_screen.dart';
 
 void main() {

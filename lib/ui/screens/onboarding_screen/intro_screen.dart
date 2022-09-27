@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:life_note/ui/screens/splash_screen/splash_screen.dart';
 import 'package:life_note/utilities/utilities.dart';
 
 class IntroScreen extends StatelessWidget {
