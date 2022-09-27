@@ -22,7 +22,7 @@ ThemeData getDarkThemeData() => ThemeData(
           fontWeight: FontWeight.bold,
           fontSize: 45,
           fontFamily: GoogleFonts.montserratAlternates().fontFamily,
-        ),,
+        ),
         titleMedium: TextStyle(
           color: AppColorDark.bigTextColor,
           fontWeight: FontWeight.bold,
@@ -34,7 +34,7 @@ ThemeData getDarkThemeData() => ThemeData(
           fontWeight: FontWeight.bold,
           fontSize: 28,
           fontFamily: GoogleFonts.montserratAlternates().fontFamily,
-        ),,
+        ),
         displayLarge: TextStyle(
           color: AppColorDark.inactiveTextColor,
           fontSize: 25,
