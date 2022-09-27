@@ -3,12 +3,18 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:life_note/constants/theme/theme.dart';
 
 ThemeData getDarkThemeData() => ThemeData(
-      appBarTheme: const AppBarTheme(
+      appBarTheme: AppBarTheme(
         color: AppColorDark.appBarColor,
         elevation: 0,
-        iconTheme: IconThemeData(
+        iconTheme: const IconThemeData(
           color: AppColorDark.appBarIconColor,
           size: 40,
+        ),
+        titleTextStyle: TextStyle(
+          color: AppColorDark.bigTextColor,
+          fontWeight: FontWeight.bold,
+          fontSize: 28,
+          fontFamily: GoogleFonts.montserratAlternates().fontFamily,
         ),
       ),
       scaffoldBackgroundColor: AppColorDark.backgroundColor,

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:life_note/constants/theme/theme.dart';
+import 'package:life_note/ui/screens/onboarding_screen/intro_screen.dart';
+import 'package:life_note/ui/screens/onboarding_screen/onboarding_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,12 +13,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: getDarkThemeData(),
-      home: const MyHomePage(
-        title: 'Flutter Demo Home',
-      ),
-    );
+        title: 'Flutter Demo',
+        theme: getDarkThemeData(),
+        home: const OnboardingScreen(
+          bigText: 'Life Note',
+          smallText: 'Record Your Life\nNever Miss A Moment',
+        ));
   }
 }
 
