@@ -40,37 +40,49 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
         leading: const Icon(Icons.search),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'Daily Notes',
-              style: Theme.of(context).textTheme.titleMedium,
-            ),
-            Text(
-              'Take notes, reminders, set targets, collect resources, and secure privacy',
-              style: Theme.of(context).textTheme.displayMedium,
-            ),
-            SizedBox(
-              width: 90,
-              child: FittedBox(
-                child: FloatingActionButton(
-                  onPressed: () {},
-                  child: const Icon(
-                    Icons.note_add_outlined,
-                  ),
-                ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Container(
+                height: MediaQuery.of(context).size.height * 0.4,
+                width: MediaQuery.of(context).size.width,
+                decoration: const BoxDecoration(
+                    image: DecorationImage(
+                  image: AssetImage(r'assets/images/note_image.png'),
+                )),
               ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            TextButton(
-              onPressed: () {},
-              child: const Text('Get Started'),
-            ),
-          ],
+              Text(
+                'Daily Notes',
+                textAlign: TextAlign.center,
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
+              Text(
+                'Take notes, reminders, set targets, collect resources, and secure privacy',
+                style: Theme.of(context).textTheme.displayMedium,
+              ),
+              // SizedBox(
+              //   width: 90,
+              //   child: FittedBox(
+              //     child: FloatingActionButton(
+              //       onPressed: () {},
+              //       child: const Icon(
+              //         Icons.note_add_outlined,
+              //       ),
+              //     ),
+              //   ),
+              // ),
+              const SizedBox(
+                height: 10,
+              ),
+              TextButton(
+                onPressed: () {},
+                child: const Text('Get Started'),
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -17,15 +17,37 @@ ThemeData getDarkThemeData() => ThemeData(
         size: 50,
       ),
       textTheme: TextTheme(
+        titleLarge: TextStyle(
+          color: AppColorDark.bigTextColor,
+          fontWeight: FontWeight.bold,
+          fontSize: 45,
+          fontFamily: GoogleFonts.montserratAlternates().fontFamily,
+        ),,
         titleMedium: TextStyle(
           color: AppColorDark.bigTextColor,
           fontWeight: FontWeight.bold,
           fontSize: 35,
           fontFamily: GoogleFonts.montserratAlternates().fontFamily,
         ),
+        titleSmall: TextStyle(
+          color: AppColorDark.bigTextColor,
+          fontWeight: FontWeight.bold,
+          fontSize: 28,
+          fontFamily: GoogleFonts.montserratAlternates().fontFamily,
+        ),,
+        displayLarge: TextStyle(
+          color: AppColorDark.inactiveTextColor,
+          fontSize: 25,
+          fontFamily: GoogleFonts.montserratAlternates().fontFamily,
+        ),
         displayMedium: TextStyle(
           color: AppColorDark.inactiveTextColor,
-          fontSize: 17,
+          fontSize: 20,
+          fontFamily: GoogleFonts.montserratAlternates().fontFamily,
+        ),
+        displaySmall: TextStyle(
+          color: AppColorDark.inactiveTextColor,
+          fontSize: 15,
           fontFamily: GoogleFonts.montserratAlternates().fontFamily,
         ),
       ),
