@@ -56,6 +56,21 @@ ThemeData getDarkThemeData() => ThemeData(
           fontSize: 15,
           fontFamily: GoogleFonts.montserratAlternates().fontFamily,
         ),
+        bodyLarge: TextStyle(
+          color: AppColorDark.activeTextColor,
+          fontSize: 25,
+          fontFamily: GoogleFonts.montserratAlternates().fontFamily,
+        ),
+        bodyMedium: TextStyle(
+          color: AppColorDark.inactiveTextColor,
+          fontSize: 20,
+          fontFamily: GoogleFonts.montserratAlternates().fontFamily,
+        ),
+        bodySmall: TextStyle(
+          color: AppColorDark.activeTextColor,
+          fontSize: 15,
+          fontFamily: GoogleFonts.montserratAlternates().fontFamily,
+        ),
       ),
       textButtonTheme: TextButtonThemeData(
         style: ButtonStyle(

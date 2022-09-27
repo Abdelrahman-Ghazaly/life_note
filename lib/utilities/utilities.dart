@@ -21,7 +21,7 @@ class Utilities {
   navigatTo({required BuildContext context, required Widget screen}) {
     Navigator.pushReplacement(
       context,
-      ConcentricPageRoute(
+      MaterialPageRoute(
         builder: (context) => screen,
       ),
     );
