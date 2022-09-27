@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:life_note/common/widgets/bottom_bar.dart';
 import 'package:life_note/constants/theme/theme.dart';
 import 'package:life_note/ui/screens/onboarding_screen/intro_screen.dart';
 import 'package:life_note/ui/screens/onboarding_screen/onboarding_screen.dart';
@@ -15,10 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Flutter Demo',
         theme: getDarkThemeData(),
-        home: const OnboardingScreen(
-          bigText: 'Life Note',
-          smallText: 'Record Your Life\nNever Miss A Moment',
-        ));
+        home: const BottomBar());
   }
 }
 
