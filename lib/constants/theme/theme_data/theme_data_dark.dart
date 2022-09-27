@@ -20,7 +20,7 @@ ThemeData getDarkThemeData() => ThemeData(
       scaffoldBackgroundColor: AppColorDark.backgroundColor,
       iconTheme: const IconThemeData(
         color: AppColorDark.iconColor,
-        size: 50,
+        size: 40,
       ),
       textTheme: TextTheme(
         titleLarge: TextStyle(
