@@ -1,5 +1,6 @@
 import 'package:concentric_transition/page_view.dart';
 import 'package:flutter/material.dart';
+import 'package:life_note/common/widgets/bottom_bar.dart';
 import 'package:life_note/constants/theme/app_colors/app_color.dart';
 import 'package:life_note/ui/screens/onboarding_screen/intro_screen.dart';
 import 'package:life_note/ui/screens/splash_screen/splash_screen.dart';
@@ -35,20 +36,20 @@ class OnboardingScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: ConcentricPageView(
-            radius: 30,
-            onFinish: () {
-              Utilities().navigatTo(
-                context: context,
-                screen: SplashScreen(),
-              );
-            },
-            verticalPosition: 0.85,
-            colors: const [
-              AppColorDark.buttonColor,
-              AppColorDark.backgroundColor,
-            ],
-            itemCount: 4,
-            itemBuilder: (int index) => pages[index]),
+          radius: 30,
+          verticalPosition: 0.85,
+          colors: const [
+            AppColorDark.buttonColor,
+            AppColorDark.backgroundColor,
+          ],
+          itemCount: 4,
+          itemBuilder: (int index) => index == 3
+              ? Utilities().navigatTo(
+                  context: context,
+                  screen: const BottomBar(),
+                )
+              : pages[index],
+        ),
       ),
     );
   }

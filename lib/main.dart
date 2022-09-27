@@ -16,7 +16,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Flutter Demo',
         theme: getDarkThemeData(),
-        home: const BottomBar());
+        home: const OnboardingScreen(
+          bigText: 'big',
+          smallText: 'small',
+        ));
   }
 }
 
