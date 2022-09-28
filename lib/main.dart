@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:life_note/common/widgets/bottom_bar.dart';
 import 'package:life_note/common/theme/theme.dart';
 import 'package:life_note/ui/screens/onboarding_screen/onboarding_screen.dart';
 
