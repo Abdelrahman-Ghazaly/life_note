@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:life_note/global/theme/theme.dart';
 
-ThemeData getLightThemeData() => ThemeData(
+ThemeData getLightThemeData() => ThemeData.light().copyWith(
+      colorScheme: const ColorScheme.light().copyWith(
+        primary: AppColorLight.backgroundColor,
+        secondary: AppColorLight.buttonColor,
+      ),
       appBarTheme: AppBarTheme(
         color: AppColorLight.appBarColor,
         elevation: 0,
