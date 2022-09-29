@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:life_note/utilities/utilities.dart';
 
-import '../../widgets/bottom_navigation_bar.dart';
+import '../../../widgets/bottom_navigation_bar.dart';
 
 class IntroData {
   const IntroData({
