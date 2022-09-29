@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:life_note/global/theme/theme.dart';
 
-ThemeData getDarkThemeData() => ThemeData(
+ThemeData getDarkThemeData() => ThemeData.dark().copyWith(
+      colorScheme: const ColorScheme.dark().copyWith(
+        primary: AppColorDark.backgroundColor,
+        secondary: AppColorDark.buttonColor,
+      ),
       appBarTheme: AppBarTheme(
         color: AppColorDark.appBarColor,
         elevation: 0,
@@ -106,5 +110,4 @@ ThemeData getDarkThemeData() => ThemeData(
         elevation: 0,
         enableFeedback: false,
       ),
-      bottomNavigationBarTheme: BottomNavigationBarThemeData(),
     );

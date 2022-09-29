@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:life_note/global/theme/theme.dart';
-import 'package:life_note/ui/screens/introduction_screens/onboarding_screen/onboarding_screen.dart';
+import 'package:life_note/ui/ui.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
+        title: 'Life Note',
         theme: getDarkThemeData(),
         home: const OnboardingScreen());
   }

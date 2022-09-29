@@ -45,9 +45,9 @@ class _BottomNavigatorBarState extends State<BottomNavigatorBar> {
       bottomNavigationBar: CurvedNavigationBar(
         index: _screen,
         height: 60,
-        backgroundColor: const Color(0xFF1F1D2B),
-        buttonBackgroundColor: const Color(0xFF6F6FC8),
-        color: const Color(0xFF1F1D2B),
+        backgroundColor: Theme.of(context).colorScheme.primary,
+        buttonBackgroundColor: Theme.of(context).colorScheme.secondary,
+        color: Theme.of(context).colorScheme.primary,
         key: _bottomNavigationKey,
         items: const <Widget>[
           Icon(Icons.note_alt_rounded),
