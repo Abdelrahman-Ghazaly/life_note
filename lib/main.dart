@@ -12,8 +12,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Life Note',
-        theme: getLightThemeData(),
-        home: const OnboardingScreen());
+      title: 'Life Note',
+      theme: getLightThemeData(),
+      home: const OnboardingScreen(),
+    );
   }
 }
