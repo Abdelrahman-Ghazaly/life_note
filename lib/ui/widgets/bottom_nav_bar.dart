@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:life_note/ui/screens/folders/screen/folders_screen.dart';
 import 'package:life_note/ui/screens/notes/screen/notes_screen.dart';
 
 class BottomNavBar extends StatefulWidget {
@@ -29,12 +30,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           style: Theme.of(context).textTheme.titleMedium,
         ),
       ),
-      Center(
-        child: Text(
-          'Category',
-          style: Theme.of(context).textTheme.titleMedium,
-        ),
-      ),
+      const FoldersScreen()
     ];
     return Scaffold(
       body: screens[_screen],
