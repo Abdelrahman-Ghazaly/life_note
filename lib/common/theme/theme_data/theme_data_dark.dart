@@ -62,7 +62,7 @@ ThemeData getDarkThemeData() => ThemeData(
           fontFamily: GoogleFonts.montserratAlternates().fontFamily,
         ),
         bodyMedium: TextStyle(
-          color: AppColorDark.inactiveTextColor,
+          color: AppColorDark.activeTextColor,
           fontSize: 20,
           fontFamily: GoogleFonts.montserratAlternates().fontFamily,
         ),
