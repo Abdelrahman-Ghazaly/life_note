@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:life_note/constants/theme/theme.dart';
+import 'package:life_note/common/theme/theme.dart';
 
 ThemeData getDarkThemeData() => ThemeData(
       appBarTheme: AppBarTheme(

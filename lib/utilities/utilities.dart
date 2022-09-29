@@ -42,5 +42,5 @@ class _MyRoute extends CupertinoPageRoute {
   _MyRoute({required WidgetBuilder builder}) : super(builder: builder);
 
   @override
-  Duration get transitionDuration => const Duration(milliseconds: 3200);
+  Duration get transitionDuration => const Duration(milliseconds: 500);
 }
