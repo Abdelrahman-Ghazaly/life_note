@@ -1,73 +1,77 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:life_note/common/theme/theme.dart';
+import 'package:life_note/global/theme/theme.dart';
 
-ThemeData getDarkThemeData() => ThemeData(
+ThemeData getLightThemeData() => ThemeData.light().copyWith(
+      colorScheme: const ColorScheme.light().copyWith(
+        primary: AppColorLight.backgroundColor,
+        secondary: AppColorLight.buttonColor,
+      ),
       appBarTheme: AppBarTheme(
-        color: AppColorDark.appBarColor,
+        color: AppColorLight.appBarColor,
         elevation: 0,
         iconTheme: const IconThemeData(
-          color: AppColorDark.appBarIconColor,
+          color: AppColorLight.appBarIconColor,
           size: 40,
         ),
         titleTextStyle: TextStyle(
-          color: AppColorDark.bigTextColor,
+          color: AppColorLight.bigTextColor,
           fontWeight: FontWeight.bold,
           fontSize: 28,
           fontFamily: GoogleFonts.montserratAlternates().fontFamily,
         ),
       ),
-      scaffoldBackgroundColor: AppColorDark.backgroundColor,
+      scaffoldBackgroundColor: AppColorLight.backgroundColor,
       iconTheme: const IconThemeData(
-        color: AppColorDark.iconColor,
+        color: AppColorLight.iconColor,
         size: 40,
       ),
       textTheme: TextTheme(
         titleLarge: TextStyle(
-          color: AppColorDark.bigTextColor,
+          color: AppColorLight.bigTextColor,
           fontWeight: FontWeight.bold,
           fontSize: 45,
           fontFamily: GoogleFonts.montserratAlternates().fontFamily,
         ),
         titleMedium: TextStyle(
-          color: AppColorDark.bigTextColor,
+          color: AppColorLight.bigTextColor,
           fontWeight: FontWeight.bold,
           fontSize: 35,
           fontFamily: GoogleFonts.montserratAlternates().fontFamily,
         ),
         titleSmall: TextStyle(
-          color: AppColorDark.bigTextColor,
+          color: AppColorLight.bigTextColor,
           fontWeight: FontWeight.bold,
           fontSize: 28,
           fontFamily: GoogleFonts.montserratAlternates().fontFamily,
         ),
         displayLarge: TextStyle(
-          color: AppColorDark.inactiveTextColor,
+          color: AppColorLight.inactiveTextColor,
           fontSize: 25,
           fontFamily: GoogleFonts.montserratAlternates().fontFamily,
         ),
         displayMedium: TextStyle(
-          color: AppColorDark.inactiveTextColor,
+          color: AppColorLight.inactiveTextColor,
           fontSize: 20,
           fontFamily: GoogleFonts.montserratAlternates().fontFamily,
         ),
         displaySmall: TextStyle(
-          color: AppColorDark.inactiveTextColor,
+          color: AppColorLight.inactiveTextColor,
           fontSize: 15,
           fontFamily: GoogleFonts.montserratAlternates().fontFamily,
         ),
         bodyLarge: TextStyle(
-          color: AppColorDark.activeTextColor,
+          color: AppColorLight.activeTextColor,
           fontSize: 25,
           fontFamily: GoogleFonts.montserratAlternates().fontFamily,
         ),
         bodyMedium: TextStyle(
-          color: AppColorDark.activeTextColor,
+          color: AppColorLight.activeTextColor,
           fontSize: 20,
           fontFamily: GoogleFonts.montserratAlternates().fontFamily,
         ),
         bodySmall: TextStyle(
-          color: AppColorDark.activeTextColor,
+          color: AppColorLight.activeTextColor,
           fontSize: 15,
           fontFamily: GoogleFonts.montserratAlternates().fontFamily,
         ),
@@ -75,13 +79,13 @@ ThemeData getDarkThemeData() => ThemeData(
       textButtonTheme: TextButtonThemeData(
         style: ButtonStyle(
           backgroundColor:
-              const MaterialStatePropertyAll(AppColorDark.buttonColor),
+              const MaterialStatePropertyAll(AppColorLight.buttonColor),
           foregroundColor:
-              const MaterialStatePropertyAll(AppColorDark.bigTextColor),
+              const MaterialStatePropertyAll(AppColorLight.bigTextColor),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30.0),
-              side: const BorderSide(color: AppColorDark.buttonColor),
+              side: const BorderSide(color: AppColorLight.buttonColor),
             ),
           ),
           padding: const MaterialStatePropertyAll(
@@ -101,7 +105,7 @@ ThemeData getDarkThemeData() => ThemeData(
         ),
       ),
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
-        backgroundColor: AppColorDark.buttonColor,
+        backgroundColor: AppColorLight.buttonColor,
         iconSize: 27,
         elevation: 0,
         enableFeedback: false,

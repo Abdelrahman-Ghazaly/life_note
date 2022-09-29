@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import 'package:life_note/common/constants/constants.dart';
+import 'package:life_note/global/constants/constants.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({
@@ -17,7 +17,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     return SafeArea(
       child: Scaffold(
         body: IntroductionScreen(
-          pages: kIntroductionPages,
+          pages: kIntroductionPages(context),
           showNextButton: true,
           next: const Icon(
             Icons.arrow_forward_ios,

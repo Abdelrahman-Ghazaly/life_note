@@ -2,26 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:life_note/ui/screens/notes/screen/notes_screen.dart';
 
-class BottomBar extends StatefulWidget {
-  const BottomBar({super.key});
+class BottomNavigatorBar extends StatefulWidget {
+  const BottomNavigatorBar({super.key});
 
   @override
-  State<BottomBar> createState() => _BottomBarState();
+  State<BottomNavigatorBar> createState() => _BottomNavigatorBarState();
 }
 
-class _BottomBarState extends State<BottomBar> {
+class _BottomNavigatorBarState extends State<BottomNavigatorBar> {
   final GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
-  int _page = 1;
+  int _screen = 1;
 
-  void updatePage(int page) {
+  void updatePage(int screen) {
     setState(() {
-      _page = page;
+      _screen = screen;
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> pages = [
+    List<Widget> screens = [
       const NotesScreen(),
       Center(
         child: Text(
@@ -37,13 +37,13 @@ class _BottomBarState extends State<BottomBar> {
       ),
     ];
     return Scaffold(
-      body: pages[_page],
+      body: screens[_screen],
       bottomNavigationBar: CurvedNavigationBar(
-        index: _page,
+        index: _screen,
         height: 60,
-        backgroundColor: const Color(0xFF1F1D2B),
-        buttonBackgroundColor: const Color(0xFF6F6FC8),
-        color: const Color(0xFF1F1D2B),
+        backgroundColor: Theme.of(context).colorScheme.primary,
+        buttonBackgroundColor: Theme.of(context).colorScheme.secondary,
+        color: Theme.of(context).colorScheme.primary,
         key: _bottomNavigationKey,
         items: const <Widget>[
           Icon(Icons.note_alt_rounded),
@@ -52,7 +52,7 @@ class _BottomBarState extends State<BottomBar> {
         ],
         onTap: (index) {
           setState(() {
-            _page = index;
+            _screen = index;
           });
         },
       ),
