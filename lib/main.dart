@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:life_note/global/theme/theme.dart';
+import 'package:life_note/ui/screens/writing_screen.dart';
 import 'package:life_note/ui/ui.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Life Note',
       theme: getLightThemeData(),
-      home: const BottomNavBar(),
+      home: const WritingScreen(),
     );
   }
 }

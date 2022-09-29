@@ -1,8 +1,4 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:life_note/common/constants/json.dart';
 import 'package:life_note/utilities/utilities.dart';
 
