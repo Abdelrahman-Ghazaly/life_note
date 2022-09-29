@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 class AppColorLight {
-  static const backgroundColor = Color.fromARGB(255, 217, 212, 212);
+  static const backgroundColor = Color(0xFFFFD1DC);
   static const appBarColor = backgroundColor;
-  static const appBarIconColor = Color.fromARGB(255, 148, 144, 144);
-  static const iconColor = Colors.white;
+  static const appBarIconColor = Color(0xFFFF8FF0);
+  static const iconColor = Colors.black54;
   static const bigTextColor = Colors.black;
-  static const inactiveTextColor = Color(0xFF9393A3);
+  static const inactiveTextColor = Colors.grey;
   static const activeTextColor = Colors.black;
-  static const buttonColor = Color.fromARGB(255, 135, 69, 69);
+  static const buttonColor = Color(0xFFFFFA9F);
 }
