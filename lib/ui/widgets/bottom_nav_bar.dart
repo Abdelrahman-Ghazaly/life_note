@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
-class BottomNavigatorBar extends StatefulWidget {
-  const BottomNavigatorBar({super.key});
+class BottomNavBar extends StatefulWidget {
+  const BottomNavBar({super.key});
 
   @override
-  State<BottomNavigatorBar> createState() => _BottomNavigatorBarState();
+  State<BottomNavBar> createState() => _BottomNavBarState();
 }
 
-class _BottomNavigatorBarState extends State<BottomNavigatorBar> {
+class _BottomNavBarState extends State<BottomNavBar> {
   final GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
   int _screen = 1;
 
