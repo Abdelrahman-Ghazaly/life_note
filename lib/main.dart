@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'Life Note',
-        theme: getLightThemeData(),
+        theme: getDarkThemeData(),
         home: const OnboardingScreen());
   }
 }
