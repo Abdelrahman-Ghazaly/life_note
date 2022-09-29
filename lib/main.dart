@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Life Note',
       theme: getLightThemeData(),
-      home: const WritingScreen(),
+      home: const BottomNavBar(),
     );
   }
 }

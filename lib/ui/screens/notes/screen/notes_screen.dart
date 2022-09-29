@@ -71,7 +71,7 @@ class NotesScreen extends StatelessWidget {
                       movieList[index]['description'],
                       style: Theme.of(context).textTheme.bodySmall,
                       overflow: TextOverflow.ellipsis,
-                      maxLines: 9,
+                      maxLines: 7,
                     ),
                     const SizedBox(
                       height: 10,
