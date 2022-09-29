@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:life_note/common/theme/theme.dart';
+import 'package:life_note/global/theme/theme.dart';
 
 ThemeData getDarkThemeData() => ThemeData(
       appBarTheme: AppBarTheme(
@@ -62,7 +62,7 @@ ThemeData getDarkThemeData() => ThemeData(
           fontFamily: GoogleFonts.montserratAlternates().fontFamily,
         ),
         bodyMedium: TextStyle(
-          color: AppColorDark.inactiveTextColor,
+          color: AppColorDark.activeTextColor,
           fontSize: 20,
           fontFamily: GoogleFonts.montserratAlternates().fontFamily,
         ),
@@ -106,4 +106,5 @@ ThemeData getDarkThemeData() => ThemeData(
         elevation: 0,
         enableFeedback: false,
       ),
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(),
     );
