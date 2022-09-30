@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:life_note/global/theme/theme.dart';
-import 'package:life_note/ui/screens/writing_screen.dart';
 import 'package:life_note/ui/ui.dart';
 
 void main() {

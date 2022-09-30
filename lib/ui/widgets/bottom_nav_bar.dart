@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:life_note/ui/screens/folders/screen/folders_screen.dart';
-import 'package:life_note/ui/screens/notes/screen/notes_screen.dart';
+import 'package:life_note/ui/screens/folders_screen/folders_screen.dart';
+import 'package:life_note/ui/screens/notes_screen/notes_screen.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
