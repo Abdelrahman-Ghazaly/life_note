@@ -21,7 +21,7 @@ class _WritingScreenState extends State<WritingScreen> {
             60,
           ),
           child: AppBar(
-            title: TextField(
+            title: const TextField(
               textAlignVertical: TextAlignVertical.center,
             ),
             elevation: 5,

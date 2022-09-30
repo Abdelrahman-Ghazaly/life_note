@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:life_note/common/constants/json.dart';
+import 'package:life_note/ui/ui.dart';
 import 'package:life_note/utilities/utilities.dart';
 
 class FoldersScreen extends StatelessWidget {
@@ -8,33 +9,7 @@ class FoldersScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-          preferredSize: Size.fromHeight(
-            Utilities.screenHeight * 0.06,
-          ),
-          child: AppBar(
-            title: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Folders',
-                  style: Theme.of(context).textTheme.titleMedium,
-                ),
-                Row(
-                  children: [
-                    Text(
-                      'data',
-                      style: Theme.of(context).textTheme.displayMedium,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                    const Icon(Icons.search_sharp),
-                    const Icon(Icons.add)
-                  ],
-                )
-              ],
-            ),
-          )),
+      appBar: const CustomAppBar(title: 'Folders'),
       body: GridView(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
@@ -61,7 +36,7 @@ class FoldersScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Container(
+                    SizedBox(
                       width: Utilities.screenWidth * 0.23,
                       height: Utilities.screenHeight * 0.115,
                       child: Image.asset(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:life_note/common/constants/json.dart';
+import 'package:life_note/ui/widgets/custom_app_bar.dart';
 import 'package:life_note/utilities/utilities.dart';
 
 class NotesScreen extends StatelessWidget {
@@ -8,35 +9,13 @@ class NotesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-          preferredSize: Size.fromHeight(
-            Utilities.screenHeight * 0.06,
-          ),
-          child: AppBar(
-            title: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Notes',
-                  style: Theme.of(context).textTheme.titleMedium,
-                ),
-                Row(
-                  children: [
-                    Text('data',
-                        style: Theme.of(context).textTheme.displayMedium),
-                    const Icon(Icons.search_sharp),
-                    const Icon(Icons.add)
-                  ],
-                )
-              ],
-            ),
-          )),
+      appBar: const CustomAppBar(title: 'Notes'),
       body: GridView(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            childAspectRatio:
-                Utilities.screenHeight * 2 / Utilities.screenHeight * 0.35),
+          crossAxisCount: 2,
+          childAspectRatio:
+              Utilities.screenHeight * 2 / Utilities.screenHeight * 0.35,
+        ),
         children: List.generate(4, ((index) {
           return Padding(
             padding:
@@ -71,7 +50,7 @@ class NotesScreen extends StatelessWidget {
                       movieList[index]['description'],
                       style: Theme.of(context).textTheme.bodySmall,
                       overflow: TextOverflow.ellipsis,
-                      maxLines: 9,
+                      maxLines: 7,
                     ),
                     const SizedBox(
                       height: 10,
