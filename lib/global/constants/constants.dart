@@ -7,11 +7,13 @@ const IntroData _page1 = IntroData(
   body: 'Record Your Life\nNever Miss A Moment',
   imageUrl: r'assets/images/laptop_girl_1.gif',
 );
+
 const IntroData _page2 = IntroData(
   title: 'Dear Dirary',
   body: 'Record Your Life\nNever Miss A Moment',
   imageUrl: r'assets/images/boy_studying.gif',
 );
+
 const IntroData _page3 = IntroData(
   title: 'Notes',
   body: 'Record Your Life\nNever Miss A Moment',
@@ -24,3 +26,5 @@ List<PageViewModel> kIntroductionPages(BuildContext context) => [
       _page2.createModel(context),
       _page3.createModel(context),
     ];
+
+const SizedBox kHeightSpacer = SizedBox(height: 15);

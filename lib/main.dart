@@ -13,8 +13,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Life Note',
-      theme: getLightThemeData(),
-      home: const WritingScreen(),
+      theme: getDarkThemeData(),
+      home: const BottomNavBar(),
     );
   }
 }
