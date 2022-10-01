@@ -110,10 +110,10 @@ ThemeData getDarkThemeData() => ThemeData.dark().copyWith(
       elevation: 0,
       enableFeedback: false,
     ),
-    checkboxTheme: CheckboxThemeData(
+    checkboxTheme: const CheckboxThemeData(
       fillColor: MaterialStatePropertyAll(AppColorDark.buttonColor),
       checkColor: MaterialStatePropertyAll(AppColorDark.bigTextColor),
     ),
-    radioTheme: RadioThemeData(
+    radioTheme: const RadioThemeData(
       fillColor: MaterialStatePropertyAll(AppColorDark.buttonColor),
     ));
