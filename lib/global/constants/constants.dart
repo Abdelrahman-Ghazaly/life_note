@@ -26,3 +26,5 @@ List<PageViewModel> kIntroductionPages(BuildContext context) => [
       _page2.createModel(context),
       _page3.createModel(context),
     ];
+
+const SizedBox kHeightSpacer = SizedBox(height: 15);

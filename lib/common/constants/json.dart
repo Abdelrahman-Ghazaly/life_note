@@ -37,36 +37,41 @@ const List movieList = [
   },
 ];
 
-const List folderList = [
+List<Map<String, dynamic>> folderList = [
   {
     "title": "The Rise",
     "path":
         "Considered a fool and unfit to lead, Nobunaga rises to power as the head of the Oda clan, spurring dissent among those in his family vying for control.",
+    'check': false,
   },
   {
     "title": "Seizing Power",
     "path":
         "Nobunaga angers warlords when he captures most of the central Japan and ignites a fierce war with Takeda Shingen, a formidable daimyo.Nobunaga angers warlords when he captures most of the central Japan and ignites a fierce war with Takeda Shingen, a formidable daimyo",
+    'check': false,
   },
   {
     "title": "The Demon King The Demon King",
     "path":
         "As Nobunaga's ambitions intensify, some generals start to question his command, leading to a betrayal that alters the political landscape forever.",
+    'check': false,
   },
   {
     "title": "Complete Control",
     "path":
         "Toyotomi Hideyoshi ascendes to power as the de facto ruler of Japan. Still, Date Masamune, a young daimyo in the north, ignores his missives.",
-    "duration": "43m"
+    'check': false,
   },
   {
     "title": "Catastrophe",
     "path":
         "With the country unified, Hideyoshi plans to expand his regn to China. Logistical chanllenges and fierce opposition in Korea prove to be costly.",
+    'check': false,
   },
   {
     "title": "Dynasty",
     "path":
         "a dying Hideyoshi appoints five agents to govern til his son comes of age, but the power-hungry Tokugawa leyasu declares war on those who oppose him.",
+    'check': false,
   },
 ];

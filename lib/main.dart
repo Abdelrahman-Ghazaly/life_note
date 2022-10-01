@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Life Note',
       theme: getDarkThemeData(),
-      home: const WritingScreen(),
+      home: const BottomNavBar(),
     );
   }
 }
