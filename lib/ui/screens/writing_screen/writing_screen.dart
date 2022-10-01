@@ -1,7 +1,5 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:life_note/global/constants/constants.dart';
+
 import 'package:life_note/utilities/utilities.dart';
 
 class WritingScreen extends StatefulWidget {
