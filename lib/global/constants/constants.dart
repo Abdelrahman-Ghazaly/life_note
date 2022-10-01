@@ -7,17 +7,20 @@ const IntroData _page1 = IntroData(
   body: 'Record Your Life\nNever Miss A Moment',
   imageUrl: r'assets/images/laptop_girl_1.gif',
 );
+
 const IntroData _page2 = IntroData(
   title: 'Dear Dirary',
   body: 'Record Your Life\nNever Miss A Moment',
   imageUrl: r'assets/images/boy_studying.gif',
 );
+
 const IntroData _page3 = IntroData(
   title: 'Notes',
   body: 'Record Your Life\nNever Miss A Moment',
   imageUrl: r'assets/images/laptop_girl_2.gif',
   hasFooter: true,
 );
+
 List<Color> colorChanger = const [
   Color.fromARGB(234, 36, 12, 248),
   Color(0x00ff0000),
@@ -30,7 +33,9 @@ List<Color> colorChanger = const [
   Color.fromARGB(242, 153, 0, 255),
   Color.fromARGB(226, 10, 247, 136),
 ];
+
 Color newColor = colorChanger[0];
+
 List<PageViewModel> kIntroductionPages(BuildContext context) => [
       _page1.createModel(context),
       _page2.createModel(context),
