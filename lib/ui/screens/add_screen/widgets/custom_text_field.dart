@@ -4,12 +4,14 @@ import 'package:life_note/utilities/utilities.dart';
 class CustomTextField extends StatelessWidget {
   const CustomTextField({
     Key? key,
-    required this.hintText,
+    required this.labelText,
     required this.controller,
+    this.isPassword = false,
   }) : super(key: key);
 
-  final String hintText;
+  final String labelText;
   final TextEditingController controller;
+  final bool isPassword;
 
   @override
   Widget build(BuildContext context) {
@@ -30,10 +32,15 @@ class CustomTextField extends StatelessWidget {
         controller: controller,
         keyboardType: TextInputType.text,
         style: Theme.of(context).textTheme.bodyMedium,
-        decoration: const InputDecoration(
-          labelText: 'Confirm Your Password',
+        obscureText: isPassword,
+        decoration: InputDecoration(
+          labelText: labelText,
           border: InputBorder.none,
-          contentPadding: EdgeInsets.all(10),
+          contentPadding: const EdgeInsets.only(
+            bottom: 10,
+            left: 20,
+            right: 20,
+          ),
         ),
       ),
     );
