@@ -5,7 +5,8 @@ import 'package:life_note/global/constants/constants.dart';
 import 'package:life_note/utilities/utilities.dart';
 
 class WritingScreen extends StatefulWidget {
-  const WritingScreen({Key? key}) : super(key: key);
+  final String? title;
+  const WritingScreen({Key? key, this.title}) : super(key: key);
 
   @override
   State<WritingScreen> createState() => _WritingScreenState();
@@ -15,9 +16,6 @@ class _WritingScreenState extends State<WritingScreen> {
   @override
   Widget build(BuildContext context) {
     TextEditingController controller = TextEditingController();
-
-    var ran = Random();
-
     return SafeArea(
       child: Scaffold(
         appBar: PreferredSize(
@@ -31,8 +29,9 @@ class _WritingScreenState extends State<WritingScreen> {
               children: [
                 const Icon(Icons.arrow_back_ios),
                 Text(
-                  "Add Your Note",
+                  widget.title!,
                   style: Theme.of(context).textTheme.bodyLarge,
+                  overflow: TextOverflow.ellipsis,
                 ),
                 const Icon(Icons.delete)
               ],
@@ -46,16 +45,6 @@ class _WritingScreenState extends State<WritingScreen> {
               const Padding(
                 padding: EdgeInsets.all(8.0),
                 child: Text('Category'),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 8, top: 11, right: 8),
-                child: SizedBox(
-                  height: Utilities.screenHeight * 0.08,
-                  width: Utilities.screenWidth,
-                  child: const TextField(
-                    textAlignVertical: TextAlignVertical.center,
-                  ),
-                ),
               ),
               SizedBox(
                 height: Utilities.screenHeight * 0.8,
