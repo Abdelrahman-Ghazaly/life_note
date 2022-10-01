@@ -20,7 +20,6 @@ class _WritingScreenState extends State<WritingScreen> {
 
     return SafeArea(
       child: Scaffold(
-        backgroundColor: newColor,
         appBar: PreferredSize(
           preferredSize: Size(
             Utilities.screenWidth,
@@ -35,19 +34,7 @@ class _WritingScreenState extends State<WritingScreen> {
                   "Add Your Note",
                   style: Theme.of(context).textTheme.bodyLarge,
                 ),
-                Row(
-                  children: [
-                    const Icon(Icons.delete),
-                    IconButton(
-                      icon: const Icon(Icons.color_lens),
-                      onPressed: () {
-                        setState(() {
-                          newColor = colorChanger[(ran.nextInt(100)) % 10];
-                        });
-                      },
-                    ),
-                  ],
-                )
+                const Icon(Icons.delete)
               ],
             ),
             elevation: 5,
