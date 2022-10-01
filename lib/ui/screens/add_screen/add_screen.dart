@@ -17,6 +17,19 @@ FileType? selectedType;
 bool isLocked = false;
 
 class _AddScreenState extends State<AddScreen> {
+  TextEditingController titleController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+  TextEditingController confirmPasswordController = TextEditingController();
+
+  @override
+  void dispose() {
+    titleController.dispose();
+    passwordController.dispose();
+    confirmPasswordController.dispose();
+
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -148,7 +161,7 @@ class _AddScreenState extends State<AddScreen> {
                     return Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Container(
+                        SizedBox(
                           width: Utilities.screenWidth * 0.7,
                           child: Text(
                             folderList[index]['title'],
